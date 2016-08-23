@@ -106,7 +106,13 @@ namespace SharpGL
         /// <param name="faceName">Name of the face.</param>
         /// <param name="fontSize">Size of the font.</param>
         /// <param name="text">The text.</param>
-        public void DrawText(OpenGL gl, int x, int y, float r, float g, float b, string faceName, float fontSize, string text)
+        /// <param name="xmin">The min x value of an orthogonal window.</param>
+        /// <param name="xmax">The max x value of an orthogonal window.</param>
+        /// <param name="ymin">The min y value of an orthogonal window.</param>
+        /// <param name="ymax">The max y value of an orthogonal window.</param>
+
+        public void DrawText(OpenGL gl, float x, float y, float r, float g, float b, string faceName, float fontSize, string text,
+                             double xmin, double xmax, double ymin, double ymax)
         {
             //  Get the font size in pixels.
             var fontHeight = (int)(fontSize * (16.0f / 12.0f));
@@ -136,7 +142,7 @@ namespace SharpGL
             
             int[] viewport = new int[4];
             gl.GetInteger(OpenGL.GL_VIEWPORT, viewport);
-            gl.Ortho(0, width, 0, height, -1, 1);
+            gl.Ortho(xmin, xmax, ymin, ymax, -1, 1);
 
             //  Create the appropriate modelview matrix.
             gl.MatrixMode(OpenGL.GL_MODELVIEW);

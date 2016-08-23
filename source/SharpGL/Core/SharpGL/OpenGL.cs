@@ -6833,11 +6833,35 @@ if (insideGLBegin == false)
         /// <param name="faceName">Name of the face.</param>
         /// <param name="fontSize">Size of the font.</param>
         /// <param name="text">The text.</param>
-        public void DrawText(int x, int y, float r, float g, float b, 
+        public void DrawText(float x, float y, float r, float g, float b,
             string faceName, float fontSize, string text)
         {
             //  Use the font bitmaps object to render the text.
-            fontBitmaps.DrawText(this, x, y, r, g, b, faceName, fontSize, text);
+            DrawText(x, y, r, g, b, faceName, fontSize, text,
+                     0,renderContextProvider.Width, 0, renderContextProvider.Height);
+        }
+
+        /// <summary>
+        /// Draws the text.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="r">The r.</param>
+        /// <param name="g">The g.</param>
+        /// <param name="b">The b.</param>
+        /// <param name="faceName">Name of the face.</param>
+        /// <param name="fontSize">Size of the font.</param>
+        /// <param name="text">The text.</param>
+        /// <param name="xmin">The min x value of an orthogonal window.</param>
+        /// <param name="xmax">The max x value of an orthogonal window.</param>
+        /// <param name="ymin">The min y value of an orthogonal window.</param>
+        /// <param name="ymax">The max y value of an orthogonal window.</param>
+        public void DrawText(float x, float y, float r, float g, float b, 
+            string faceName, float fontSize, string text,
+            double xmin, double xmax, double ymin, double ymax)
+        {
+            //  Use the font bitmaps object to render the text.
+            fontBitmaps.DrawText(this, x, y, r, g, b, faceName, fontSize, text, xmin, xmax, ymin, ymax);
         }
 
         /// <summary>
