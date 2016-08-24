@@ -48,6 +48,10 @@
     <AssemblyOriginatorKeyFile>SharpGL.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpGL, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharpGL\bin\Debug\SharpGL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -170,12 +174,6 @@
     <Compile Include="Shaders\ShaderProgram.cs" />
     <Compile Include="Shaders\Shader.cs" />
     <Compile Include="Shaders\VertexShader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SharpGL\SharpGL.csproj">
-      <Project>{5EF45533-E2C7-46F2-B4A3-B8F36CD406E0}</Project>
-      <Name>SharpGL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpGL.snk" />

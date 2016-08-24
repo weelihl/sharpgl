@@ -46,6 +46,12 @@
     <AssemblyOriginatorKeyFile>SharpGL.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpGL">
+      <HintPath>..\SharpGL\bin\Debug\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.SceneGraph">
+      <HintPath>..\SharpGL.SceneGraph\bin\Debug\SharpGL.SceneGraph.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -101,16 +107,6 @@
   <ItemGroup>
     <Content Include="SharpGL.ico" />
     <Content Include="SharpGL.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SharpGL.SceneGraph\SharpGL.SceneGraph.csproj">
-      <Project>{47BCAA39-EDAD-4404-B6BD-4742B0ABB523}</Project>
-      <Name>SharpGL.SceneGraph</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SharpGL\SharpGL.csproj">
-      <Project>{5EF45533-E2C7-46F2-B4A3-B8F36CD406E0}</Project>
-      <Name>SharpGL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="SharpGL.snk" />
