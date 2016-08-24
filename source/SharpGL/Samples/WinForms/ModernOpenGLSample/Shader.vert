@@ -1,6 +1,5 @@
-﻿#version 150 core
-
-in vec3 in_Position;
+﻿#version 420 core
+layout(location = 0) in vec3 in_Position;
 in vec3 in_Color;  
 out vec3 pass_Color;
 uniform mat4 projectionMatrix;
