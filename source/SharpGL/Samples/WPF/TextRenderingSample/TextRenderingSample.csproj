@@ -51,6 +51,18 @@
     <Reference Include="Apex">
       <HintPath>..\..\..\Dependencies\Apex.dll</HintPath>
     </Reference>
+    <Reference Include="SharpGL, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>packages\SharpGL.2.4.0.0\lib\net40\SharpGL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpGL.SceneGraph, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>packages\SharpGL.2.4.0.0\lib\net40\SharpGL.SceneGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpGL.WPF, Version=2.4.0.0, Culture=neutral, PublicKeyToken=27fc851303210b27, processorArchitecture=MSIL">
+      <HintPath>packages\SharpGL.WPF.2.4.0.0\lib\net40\SharpGL.WPF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -106,25 +118,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\SharpGL.SceneGraph\SharpGL.SceneGraph.csproj">
-      <Project>{47BCAA39-EDAD-4404-B6BD-4742B0ABB523}</Project>
-      <Name>SharpGL.SceneGraph</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\SharpGL.WPF\SharpGL.WPF.csproj">
-      <Project>{53E67055-13D2-4467-BB57-79589AFAC2CD}</Project>
-      <Name>SharpGL.WPF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\SharpGL\SharpGL.csproj">
-      <Project>{5EF45533-E2C7-46F2-B4A3-B8F36CD406E0}</Project>
-      <Name>SharpGL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SharpGL.ico" />

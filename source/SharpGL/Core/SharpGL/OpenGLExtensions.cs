@@ -1034,6 +1034,18 @@ namespace SharpGL
             GetDelegateFor<glBufferData>()(target, dataSize, p, usage);
             Marshal.FreeHGlobal(p);
         }
+
+        public void BufferData(uint target, uint[] data, uint usage)
+        {
+            var dataSize = data.Length * sizeof(uint);
+            IntPtr p = Marshal.AllocHGlobal(dataSize);
+            var intData = new int[data.Length];
+            Buffer.BlockCopy(data, 0, intData, 0, dataSize);
+            Marshal.Copy(intData, 0, p, data.Length);
+            GetDelegateFor<glBufferData>()(target, dataSize, p, usage);
+            Marshal.FreeHGlobal(p);
+        }
+
         public void BufferSubData(uint target, int offset, int size, IntPtr data)
         {
             GetDelegateFor<glBufferSubData>()(target, offset, size, data);
