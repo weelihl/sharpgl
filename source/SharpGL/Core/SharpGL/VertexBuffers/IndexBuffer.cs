@@ -15,6 +15,11 @@ namespace SharpGL.VertexBuffers
             gl.BufferData(OpenGL.GL_ELEMENT_ARRAY_BUFFER, rawData, drawMode);
         }
 
+        public void SetData(OpenGL gl, uint[] rawData, uint drawMode)
+        {
+            gl.BufferData(OpenGL.GL_ELEMENT_ARRAY_BUFFER, rawData, drawMode);
+        }
+
         public void Bind(OpenGL gl)
         {
             gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, bufferObject);
